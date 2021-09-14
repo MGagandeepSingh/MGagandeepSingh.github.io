@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --primary-color: #142330;
@@ -204,6 +204,14 @@ header button {
 }
 
 .border-above {
-    border-top: 1px solid var(--grays);
-    margin-top: 10px;
-  }
+  border-top: 1px solid var(--grays);
+  margin-top: 10px;
+}
+
+.vis-sm {
+  display: none;
+}
+
+#nav-side-menu {
+  display: none;
+}

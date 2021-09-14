@@ -5,16 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="fonts/css/all.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-sm.css">
     <title>Gagandeep Singh</title>
 </head>
 
 <body>
+
+    <aside id="nav-side-menu">
+        <div class="nav-side-container">
+            <div class="menu-items">
+                <div><a href="">Introduction</a></div>
+                <div class="vm"><a href="">About Me</a></div>
+                <div class="vm"><a href="">Education & Experience</a></div>
+                <div class="vm"><a href="./pages/projects.html">Projects</a></div>
+                <div class="vm"><a href="./pages/blog-index.html">Blog</a></div>
+                <div class="vm">
+                    <button type="button">Resume</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
     <header>
         <nav>
             <div class="nav-container">
                 <div class="logo"><a href="#">G</a></div>
-                <div class="nav-items">
+
+                <button id="burger" class="vis-sm" onclick="myFunction()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="nav-items vis-lg">
                     <ul>
                         <li><a href="">Introduction</a></li>
                         <li><a href="">About Me</a></li>
@@ -30,7 +54,7 @@
         </nav>
     </header>
 
-    <section>
+    <section id="hey">
         <div class="container">
             <div>
                 <div class="hello">
@@ -55,8 +79,8 @@
         </div>
     </section>
 
-    
-    <section>
+
+    <section id="about">
         <div class="section-container sb-mega">
             <div class="items-container">
                 <h2 class="hc bbh sb-2 pb-2 fw-5 f-2">About Me</h2>
@@ -141,6 +165,7 @@
         </div>
     </section>
 
+    <script src="./js/script.js"></script>
 
 </body>
 
