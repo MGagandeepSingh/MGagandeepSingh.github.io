@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/css/all.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style-sm.css">
+    <title>Thread Local</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo"><a href="#">G</a></div>
+
+                <button id="burger" class="vis-sm" onclick="myFunction()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="nav-items vis-lg">
+                    <ul>
+                        <li><a href="#">Introduction</a></li>
+                        <li><a href="">About Me</a></li>
+                        <li><a href="">Education & Experience</a></li>
+                        <li><a href="./pages/projects.html">Projects</a></li>
+                        <li><a href="./pages/blog-index.html">Blog</a></li>
+                    </ul>
+                    <div>
+                        <button type="button">Resume</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+
+        <div style="padding-top:150px; max-width: 70vw; margin: auto;">
+
+            <div
+                style="font-size: 25px; padding-bottom: 20px; border-bottom: 1px solid var(--secondary-color); color: var(--secondary-color);">
+                <h1>Understanding Thread Local</h1>
+            </div>
+
+            <div style="line-height: 25px; font-weight: 200">
+                <p style="padding: 40px 40px 0 40px; font-size: 19px;">
+                    Thread local class in java is another way to provide, <span
+                        style="color: var(--secondary-color); font-weight: 400;">thread safety</span>, apart from the
+                    synchronization
+                    mechanish.
+                </p>
+                <p style="padding: 15px 40px 0 40px; font-size: 19px;">
+                    It provides a thread local variables where each thread accesses independently initialized copy of
+                    the variable. Since each and evry thread has it's own copy of the object hence explicit
+                    synchronization is not needed.
+                </p>
+                <p style="padding: 15px 40px 0px 40px; font-size: 19px;">
+                    This class provides thread local variables. It maintain values per thread basis, each thread local
+                    object maintain a separate value like userId, transactionId etc., for each thread that accesses that
+                    object.
+                </p>
+                <p style="padding: 25px 40px 0px 40px; font-size: 19px;">
+                    &nbsp;
+                </p>
+                <p style="padding: 0 40px 0px 40px; font-size: 19px;">
+                    Thread can access it's local value, manipulate it's value & even can remove it's value. In every
+                    part of the code, executed by the thread, we can access it's local variable.
+                </p>
+                <p style="padding: 15px 40px 0px 40px; font-size: 19px;">
+                    <span style="color: var(--secondary-color); font-weight: 400">Example: </span> Consider a servlet
+                    which invokes some
+                    business method, we have a request to generate a unique transaction ID for every request & we have
+                    to pass this ID to business methods, for this request we can use thread local to maintain a separate
+                    transaction Id for every request (for every thread).
+                </p>
+                <div class="note"
+                    style="padding: 15px 40px 0px 40px; font-size: 19px; border-radius: 7px; padding: 40px; margin: 40px; box-shadow: 0 3.2px 7.2px 0 var(--off-color), 0 0.6px 1.8px 0 var(--off-color) !important; line-height: 35px;">
+                    <div>1. ThreadLocal class was introduced in 1.2v and enhanced in 1.5v</div>
+                    <div>2. It can be associated with thread scope</div>
+                    <div>3. Total code executed by the thread has access to the correspondant ThreadLocal variable.
+                    </div>
+                    <div>4. A thread cann access it's own local variable but can't of others.</div>
+                    <div>5. Once the thread enters into dead state, all it's local variables are by default eligible for
+                        Garbage Collection</div>
+                </div>
+
+                <code style="padding: 15px 40px 0px 40px; font-size: 17px;">
+                    <pre style="padding: 15px 40px 0px 40px; font-size: 17px; border-radius: 7px; padding: 40px; margin: 40px; box-shadow: 0 3.2px 7.2px 0 var(--off-color), 0 0.6px 1.8px 0 var(--off-color) !important;">
+<!--                -->public class ThreadLocalDemo extends Thread {
+
+    <!--                -->private static final ThreadLocal&lt;NotThreadSafe&gt; myCount = new ThreadLocal&lt;&gt;() {
+
+        <!--                -->@Override
+        <!--                -->protected NotThreadSafe initialValue() {
+        <!--                -->    return new NotThreadSafe();
+        <!--                -->}
+
+        <!--                -->public static void main(String[] args) {
+
+        <!--                -->    Thread t1 = new Thread(new ThreadLocalDemo(), "T1");
+        <!--                -->    Thread t2 = new Thread(new ThreadLocalDemo(), "T2");
+        <!--                -->    Thread t3 = new Thread(new ThreadLocalDemo(), "T3");
+
+        <!--                -->    t1.start();
+        <!--                -->    t2.start();
+        <!--                -->    t3.start();
+        <!--                -->}
+    <!--                -->}
+
+    <!--                -->public void run() {
+    <!--                -->    
+    <!--                -->    System.out.println(Thread.currentThread() + " : " + myCount.get().getCount());
+    <!--                -->    NotThreadSafe safe = myCount.get();
+    <!--                -->    for(int i = 0; i &lt; 100; i++) {
+    <!--                -->        myCount.increment(safe);
+    <!--                -->    }
+    <!--                -->    System.out.println(Thread.currentThread() + " : " + myCount.get().getCount());
+    <!--                -->}
+}
+
+<!--                -->class NotThreadSafe {
+<!--                -->
+<!--                -->    private static int count = 0;
+<!--                -->
+<!--                -->    public void increment() {
+<!--                -->        count++;
+<!--                -->    }
+<!--                -->
+<!--                -->    public int getCount() {
+<!--                -->        return count;
+<!--                -->    }
+<!--                -->}
+                    </pre>
+                </code>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

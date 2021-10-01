@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 320px) and (max-device-width: 599px) and (orientation: portrait) {
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) {
   .vis-lg {
     display: none;
   }
@@ -12,8 +12,9 @@
   }
 
   .nav-container {
-    font-size: 20px;
+    font-size: 10px;
     max-width: 85vw;
+    border: 1px solid peru;
   }
 
   .container {
@@ -94,7 +95,4 @@
     flex-flow: column wrap;
     align-items: center;
   }
-}
-
-@media screen and (orientation: landscape) {
 }

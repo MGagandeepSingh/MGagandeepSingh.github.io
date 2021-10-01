@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="fonts/css/all.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-sm.css">
@@ -17,7 +18,7 @@
     <aside id="nav-side-menu">
         <div class="nav-side-container">
             <div class="menu-items">
-                <div><a href="">Introduction</a></div>
+                <div><a href="#">Introduction</a></div>
                 <div class="vm"><a href="">About Me</a></div>
                 <div class="vm"><a href="">Education & Experience</a></div>
                 <div class="vm"><a href="./pages/projects.html">Projects</a></div>
@@ -29,141 +30,215 @@
         </div>
     </aside>
 
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo"><a href="#">G</a></div>
 
-                <button id="burger" class="vis-sm" onclick="myFunction()">
-                    <i class="fas fa-bars"></i>
-                </button>
+    <div class="port-container">
 
-                <div class="nav-items vis-lg">
-                    <ul>
-                        <li><a href="">Introduction</a></li>
-                        <li><a href="">About Me</a></li>
-                        <li><a href="">Education & Experience</a></li>
-                        <li><a href="./pages/projects.html">Projects</a></li>
-                        <li><a href="./pages/blog-index.html">Blog</a></li>
-                    </ul>
-                    <div>
-                        <button type="button">Resume</button>
+        <div class="port-head">
+            <header>
+                <nav>
+                    <div class="nav-container">
+                        <div class="logo"><a href="#">G</a></div>
+
+                        <button id="burger" class="vis-sm" onclick="myFunction()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <div class="nav-items vis-lg">
+                            <ul>
+                                <li><a href="#">Introduction</a></li>
+                                <li><a href="">About Me</a></li>
+                                <li><a href="">Education & Experience</a></li>
+                                <li><a href="./pages/projects.html">Projects</a></li>
+                                <li><a href="./pages/blog-index.html">Blog</a></li>
+                            </ul>
+                            <div>
+                                <button type="button">Resume</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <section id="hey">
-        <div class="container">
-            <div>
-                <div class="hello">
-                    <h4>Hey there, this is</h4>
-                </div>
-                <div class="name">
-                    <h1>Gagandeep Singh.</h1>
-                </div>
-                <div class="title">
-                    <h3>Full Stack Software Developer</h3>
-                </div>
-                <div class="about">
-                    <p>
-                        I'm a software engineer with 10.5 years of experience in software development, and I'm currently
-                        employed with <a href="https://blackrock.com/" target="_blank">BlackRock</a>.
-                    </p>
-                </div>
-                <div>
-                    <button type="button"><a href="./pages/blog-index.html">Visit my Tech Blog</a></button>
-                </div>
-            </div>
+                </nav>
+            </header>
         </div>
-    </section>
 
 
-    <section id="about">
-        <div class="section-container sb-mega">
-            <div class="items-container">
-                <h2 class="hc bbh sb-2 pb-2 fw-5 f-2">About Me</h2>
-                <p class="fw-5 f-1 glow">Hi, my name is Gagandeep Singh.</p>
-                <p class="f-1 dull sb-1">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim enim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat
-                </p>
-                <p class="f-1 sb-3 glow">Here are a few technologies I've been working with recently</p>
-
-                <div class="stack-x stack-x-landscape">
-
-                    <div class="queue-x sb-4 hc-border item-landscape">
-                        <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
-                            <i class="fab fa-java"></i>
+        <div class="port-content">
+            <section id="hey">
+                <div class="container">
+                    <div class="portland">
+                        <div class="hello">
+                            <h4>Hey there, this is</h4>
                         </div>
-                        <div class="g-3 stack" style="flex-basis: 70%;">
-                            <p class="hc f-2 fw-6">Java</p>
-                            <p class="glow f-0">version 8</p>
-                            <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.</p>
+                        <div class="name">
+                            <h1>Gagandeep Singh.</h1>
                         </div>
-                    </div>
-
-                    <div class="queue-x sb-4 hc-border item-landscape">
-                        <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2.5rem;">
-                            <i class="fas fa-leaf"></i>
+                        <div class="title">
+                            <h3>Full Stack Software Developer</h3>
                         </div>
-                        <div class="g-3 stack" style="flex-basis: 70%;">
-                            <p class="hc f-2 fw-6">Spring</p>
-                            <p class="glow f-0">version 5</p>
-                            <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.</p>
+                        <div class="about">
+                            <p>
+                                I'm a software engineer with 10.5 years of experience in software development, and I'm
+                                currently
+                                employed with <a href="https://blackrock.com/" target="_blank">BlackRock</a>.
+                            </p>
                         </div>
-                    </div>
-
-                    <div class="queue-x sb-4 hc-border item-landscape">
-                        <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
-                            <i class="fab fa-angular"></i>
-                        </div>
-                        <div class="g-3 stack" style="flex-basis: 70%;">
-                            <p class="hc f-2 fw-6">Angular</p>
-                            <p class="glow f-0">version 9</p>
-                            <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-
-                    <div class="queue-x sb-4 hc-border item-landscape">
-                        <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="g-3 stack" style="flex-basis: 70%;">
-                            <p class="hc f-2 fw-6">SQL</p>
-                            <p class="glow f-0">Oracle, MySQL</p>
-                            <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-
-                    <div class="queue-x sb-4 hc-border item-landscape">
-                        <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2rem;">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <div class="g-3 stack" style="flex-basis: 70%;">
-                            <p class="hc f-2 fw-6">AWS</p>
-                            <p class="glow f-0">AWS Certified Developer</p>
-                            <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-
-                    <div class="queue-x sb-4 hc-border item-landscape">
-                        <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2.5rem;">
-                            <i class="fab fa-docker"></i>
-                        </div>
-                        <div class="g-3 stack" style="flex-basis: 70%;">
-                            <p class="hc f-2 fw-6">Docker</p>
-                            <p class="glow f-0">version 15</p>
-                            <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.</p>
+                        <div>
+                            <button type="button"><a href="./pages/blog-index.html">Visit my Tech Blog</a></button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
+            <section id="about">
+                <div class="inner-container">
+                    <h1>About Me</h1>
+                    <div class="close-container">
+
+                        <div class="about sided">
+                            <img src="./images/gagan.jpg" alt="Gagandeep Singh">
+                            <p>
+                                Hi, my name is Gagandeep Singh. I'm a Java developer with great interpersonal skills,
+                                team player having around 10.5 years of experience in application development, testing
+                                and deployment.<br><br>
+                                I love watching latest movies and series and love playing indoor and outdoor games.
+                            </p>
+                        </div>
+
+                        <div class="about">
+                            <p>Developing applications is not just a job for me, it's my passion, and I derive joy from
+                                what I love doing.</p>
+                        </div>
+
+                        <div class="about">
+                            <p>Here are few of the technologies that I have used for building applications</p>
+                        </div>
+
+                        <div class="tech-container">
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Java</p>
+                                    <p class="glow f-0">version 8</p>
+                                </div>
+                            </div>
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Java</p>
+                                    <p class="glow f-0">version 8</p>
+                                </div>
+                            </div>
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Java</p>
+                                    <p class="glow f-0">version 8</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="about">
+                <div class="section-container sb-mega">
+                    <div class="items-container">
+                        <h2 class="hc bbh sb-2 pb-2 fw-5 f-2">About Me</h2>
+                        <p class="fw-5 f-1 glow">Hi, my name is Gagandeep Singh.</p>
+                        <p class="f-1 dull sb-1">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore et dolore magna aliqua. Ut enim ad minim enim veniam, quis nostrud exercitation
+                            ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat
+                        </p>
+                        <p class="f-1 sb-3 glow">Here are a few technologies I've been working with recently</p>
+
+                        <div class="stack-x stack-x-landscape">
+
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Java</p>
+                                    <p class="glow f-0">version 8</p>
+                                    <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2.5rem;">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Spring</p>
+                                    <p class="glow f-0">version 5</p>
+                                    <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
+                                    <i class="fab fa-angular"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Angular</p>
+                                    <p class="glow f-0">version 9</p>
+                                    <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 3rem;">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">SQL</p>
+                                    <p class="glow f-0">Oracle, MySQL</p>
+                                    <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2rem;">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">AWS</p>
+                                    <p class="glow f-0">AWS Certified Developer</p>
+                                    <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="queue-x sb-4 hc-border item-landscape">
+                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2.5rem;">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                                <div class="g-3 stack" style="flex-basis: 70%;">
+                                    <p class="hc f-2 fw-6">Docker</p>
+                                    <p class="glow f-0">version 15</p>
+                                    <p class="f-1 dull st-1">Lorem ipsum dolor sit amet Consectetur adipisicing elit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
 
     <script src="./js/script.js"></script>
 
