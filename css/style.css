@@ -286,6 +286,14 @@ header button {
   max-width: 600px;
 }
 
+.tech-container-col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+}
+
 .tech {
   flex: 1 0 17%;
   display: flex;
@@ -294,6 +302,22 @@ header button {
   align-items: center;
   padding: 10px;
   margin: 10px;
+}
+
+.tech-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 20px;
+}
+
+.tech-row-rev {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 20px;
 }
 
 .fa-sm {
@@ -311,7 +335,6 @@ header button {
   align-items: center;
   padding: 50px;
   margin-top: 200px;
-
 }
 
 .social ul {
@@ -328,4 +351,36 @@ header button {
 
 .social svg {
   max-width: 20px;
+}
+
+.section-space {
+  margin-top: 200px;
+}
+
+.edex {
+  max-width: 600px;
+  color: var(--grays);
+  font-family: var(--secondary-font);
+  font-size: var(--font-size-sm);
+}
+
+.inst {
+  font-size: 4rem;
+  margin-right: 50px;
+}
+
+.inst-rev {
+  font-size: 4rem;
+  margin-left: 50px;
+}
+
+.inst-desc {
+  color: var(--grays);
+  max-width: 400px;
+}
+
+.name-h {
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+  font-size: 15px;
 }
