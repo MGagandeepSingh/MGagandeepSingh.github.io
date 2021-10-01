@@ -246,13 +246,12 @@ header button {
   height: 1px;
   margin-left: 20px;
   background-color: var(--secondary-color);
+  z-index: -1;
 }
 
 .close-container {
   display: flex;
   flex-flow: column wrap;
-  /* justify-content: flex-start; */
-  /* align-items: flex-start; */
   margin: auto;
 }
 
@@ -262,6 +261,7 @@ header button {
   border-radius: var(--primary-radius);
   margin-bottom: var(--nav-spacing);
   margin-right: 50px;
+  z-index: -1;
 }
 
 .sided {
@@ -272,4 +272,60 @@ header button {
 .sided p {
   max-width: 300px;
   padding-left: 0 0 0 50px;
+}
+
+.mb {
+  margin-bottom: var(--nav-spacing);
+}
+
+.tech-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+}
+
+.tech {
+  flex: 1 0 17%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.fa-sm {
+  font-size: 2.5rem;
+}
+
+.fa-def {
+  font-size: 3rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  margin-top: 200px;
+
+}
+
+.social ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-around;
+}
+
+.social ul li {
+  font-size: 2rem;
+  padding: 10px 20px;
+}
+
+.social svg {
+  max-width: 20px;
 }
