@@ -88,7 +88,16 @@ ol {
   list-style: outside none none;
 }
 
-header button {
+header .button {
+  margin-left: var(--nav-spacing);
+  padding: 10px 20px;
+  border: 1px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: var(--secondary-radius);
+}
+
+header button:hover {
   margin-left: var(--nav-spacing);
   padding: 10px 20px;
   border: 1px solid var(--secondary-color);
