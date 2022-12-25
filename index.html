@@ -5,389 +5,477 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fav Icon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="fonts/css/all.css" />
+
+    <!-- Google fonts settings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Highlighter JS -->
+    <link rel="stylesheet" href="packages/highlight/styles/atom-one-dark-reasonable.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/>
+
+    <!-- Icons -->
+    <link rel="stylesheet" type="text/css" href="fonts/css/all.css"/>
+
+    <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-sm.css">
     <title>Gagandeep Singh</title>
+
 </head>
 
 <body>
 
-    <aside id="nav-side-menu">
-        <div class="nav-side-container">
-            <div class="menu-items">
-                <div><a href="#">Introduction</a></div>
-                <div class="vm"><a href="#aboutme">About Me</a></div>
-                <div class="vm"><a href="#edex">Education & Experience</a></div>
-                <div class="vm"><a href="./pages/projects.html">Projects</a></div>
-                <div class="vm"><a href="./pages/blog-index.html">Blog</a></div>
-                <div class="vm">
-                    <a class="button" href="./resume.docx" target="_blank" rel="noopener noreferrer">Resume</a>
+<!-- Header -->
+<nav class="navbar navbar-expand-lg sticky-top px-md-5">
+    <div class="container-fluid">
+        <a class="navbar-brand logo" href="#">G</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars" style="font-size:28px;"></i>
+                </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto d-flex justify-content-between">
+                <a class="nav-link active mx-lg-4 my-sm-4" aria-current="page" href="#">Introduction</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="#about-me">About Me</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="#ed-ex">Education & Experience</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="html/projects/projects-index.html">Projects</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="html/blog/blog-index.html">Blog</a>
+                <div class="nav-link my-sm-4">
+                    <a class="button" href="Resume.docx" target="_blank"
+                       rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
-        </div>
-    </aside>
-
-
-    <div class="port-container">
-
-        <div class="port-head">
-            <header>
-                <nav>
-                    <div class="nav-container">
-                        <div class="logo"><a href="#">G</a></div>
-
-                        <button id="burger" class="vis-sm" onclick="myFunction()">
-                            <i class="fas fa-bars"></i>
-                        </button>
-
-                        <div class="nav-items vis-lg">
-                            <ul>
-                                <li><a href="#">Introduction</a></li>
-                                <li><a href="#aboutme">About Me</a></li>
-                                <li><a href="#edex">Education & Experience</a></li>
-                                <li><a href="./pages/projects.html">Projects</a></li>
-                                <li><a href="./pages/blog-index.html">Blog</a></li>
-                            </ul>
-                            <div>
-                                <a class="button" href="./resume.docx" target="_blank"
-                                    rel="noopener noreferrer">Resume</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-        </div>
-
-
-        <div class="port-content">
-            <section id="hey">
-                <div class="container">
-                    <div class="portland">
-                        <div class="hello">
-                            <h4>Hey there, this is</h4>
-                        </div>
-                        <div class="name">
-                            <h1>Gagandeep Singh.</h1>
-                        </div>
-                        <div class="title">
-                            <h3>Full Stack Software Developer</h3>
-                        </div>
-                        <div class="about">
-                            <p>
-                                I'm a software engineer with 10.5 years of experience in software development, and I'm
-                                currently
-                                employed with <a href="https://blackrock.com/" target="_blank">BlackRock</a>.
-                            </p>
-                        </div>
-                        <div>
-                            <button type="button"><a href="./pages/blog-index.html">Visit my Tech Blog</a></button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <a id="aboutme">&nbsp;</a>
-            <section id="about">
-                <div class="inner-container">
-                    <h1>About Me</h1>
-                    <div class="close-container">
-
-                        <div class="about sided">
-                            <img src="./images/gagan.jpg" alt="Gagandeep Singh">
-                            <p>
-                                Hi, my name is Gagandeep Singh. I'm a Java developer with great interpersonal skills,
-                                team player having around 10.5 years of experience in application development, testing
-                                and deployment.<br><br>
-                                I love watching latest movies and series and love playing indoor and outdoor games.
-                            </p>
-                        </div>
-
-                        <div class="about">
-                            <p>Developing applications is not just a job for me, it's my passion, and I derive joy from
-                                what I love doing.</p>
-                        </div>
-
-                        <div class="about mb">
-                            <p>Here are few of the technologies that I have recently used for building applications</p>
-                        </div>
-
-                        <div class="tech-container">
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-java"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">Java 8</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fas fa-leaf fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">Spring 5</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-angular fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">Angular 12</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fas fa-database fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">SQL</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-aws fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">AWS</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-docker fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">Docker</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fas fa-power-off fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">Spring Boot</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-jenkins"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">CI/CD</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-html5"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">HTML 5</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fab fa-css3-alt"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">CSS 3</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fas fa-project-diagram fa-sm"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">GraphQL</p>
-                                </div>
-                            </div>
-
-                            <div class="tech">
-                                <div class="fa-def">
-                                    <i class="fas fa-exchange-alt"></i>
-                                </div>
-                                <div>
-                                    <p class="hc f-2 fw-6">Kafka</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <a id="edex">&nbsp;</a>
-            <section class="section-space">
-                <div class="inner-container">
-                    <h1>Education & Experience</h1>
-
-                    <div class="close-container">
-                        <h2 class="edex">Education</h2>
-                        <p class="edex">
-                            I hold a master's degree in computer application from Guru Gobind Singh Indraprstha
-                            University.
-                        </p>
-
-                        <div class="tech-container" style="margin: 30px 0">
-
-                            <div class="tech">
-                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2.5rem;">
-                                    <i class="fas fa-user-graduate"></i>
-                                </div>
-                                <p class="hc f-2 fw-6">MCA</p>
-                                <p class="glow f-0">2007-2010</p>
-                                <p>GGSIPU</p>
-                            </div>
-
-                            <div class="tech">
-                                <div class="g-1 hc center" style="flex-basis: 30%; font-size: 2.5rem;">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <p class="hc f-2 fw-6">BCA</p>
-                                <p class="glow f-0">2004-2007</p>
-                                <p>GGSIPU</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="close-container">
-                        <h2 class="edex">Experience</h2>
-                        <p class="edex">I'm very fortunate that I got the oppurtunity to work with the following
-                            organisation</p>
-
-                        <div class="tech-container-col">
-
-                            <div class="tech-row">
-                                <div class="inst">
-                                    <i class="fas fa-file-signature"></i>
-                                </div>
-                                <div class="inst-desc">
-                                    <p class="name-h">
-                                        BlackRock</p>
-                                    <p>Analyst (2017 - Current)</p>
-                                    <p>
-                                        Developed Swing automation framework; enables the developers and testers to test
-                                        the Swing front-end using the framework.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="tech-row-rev">
-                                <div class="inst-rev">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <div class="inst-desc">
-                                    <p class="name-h">RBS</p>
-                                    <p>Software Developer (2014 - 2016)</p>
-                                    <p>
-                                        Venture was a reporting tool used by teams to find out about various positions.
-                                        System consists of upstream raw data that was refined and processed and served
-                                        to the downstream for usage
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="tech-row">
-                                <div class="inst">
-                                    <i class="fas fa-wallet"></i>
-                                </div>
-                                <div class="inst-desc">
-                                    <p class="name-h">Amdocs</p>
-                                    <p>Subject MatterExpert (2011 - 2014)</p>
-                                    <p>
-                                        Different tools for mobile wallet payments. Project's focus was the mobile
-                                        wallet payments billing handling.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
         </div>
     </div>
+</nav>
+<!-- End Header -->
 
-    <footer>
-        <div class="footer-container">
-            <div class="social">
-                <ul>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-github">
-                            <title>GitHub</title>
-                            <path
-                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-instagram">
-                            <title>Instagram</title>
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-twitter">
-                            <title>Twitter</title>
-                            <path
-                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                            </path>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-linkedin">
-                            <title>LinkedIn</title>
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-youtube">
-                            <title>YouTube</title>
-                            <path
-                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-                        </svg>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <div>Built By: Gagandeep Singh</div>
+<!-- Main Body -->
+<div class="container">
+
+    <!-- Introduction Section -->
+    <section id="hey" class="d-flex justify-content-center align-items-center" style="min-height: 80vh">
+        <div class="ps-4">
+            <div class="hey h4">Hey there, this is</div>
+            <div class="name h1">Gagandeep Singh.</div>
+            <div class="title h2">Full Stack Software Developer</div>
+            <p class="about">
+                I'm a software engineer with 12 years of experience in software development, and I'm
+                currently
+                employed with <a href="https://maersk.com/" target="_blank">Maersk</a>.
+            </p>
+            <button type="button">
+                <a href="html/blog/blog-index.html">
+                    Visit my Tech Blog
+                </a>
+            </button>
+        </div>
+    </section>
+    <!-- End Introduction Section -->
+
+    <!-- About Me Section -->
+    <a id="about-me">&nbsp;</a>
+    <section id="about" class="spacer-lg">
+        <div class="container d-flex justify-content-center mt-5 p-5">
+            <div class="container">
+                <div class="heading">
+                    <div>About Me</div>
+                </div>
+                <div class="row d-flex justify-content-center align-content-center mt-5">
+                    <div id="img-col" class="col text-center">
+                        <img src="./images/gagan.jpg" alt="Gagandeep Singh">
+                    </div>
+                    <div class="col d-flex flex-column align-items-center">
+                        <div class="about besides-column p-3">
+                            Hi, my name is <span
+                                style="font-family: var(--cs-nb-text-font); color: var(--cs-highlight-font-color)">Gagandeep Singh</span>.
+                            I'm a Java developer with great interpersonal skills,
+                            team player having around 12 years of experience in application development, testing
+                            and deployment.
+                        </div>
+                        <div class="about besides-column p-3">
+                            Developing applications is not just a job for me, it's my passion, and I derive joy from
+                            what I love doing. When I'm not working I love spending time watching movie or playing
+                            games.
+                        </div>
+                    </div>
+                </div>
+                <hr class="m-5">
+                <div class="container"
+                     style="font-family: var(--cs-logo-text-font); color: var(--cs-primary-font-color)">
+                    <div class="px-1 mt-4 text-center">
+                        A consolidated list of technologies that I'm constantly using for application development.
+                    </div>
+                    <div class="row row-cols-2 row-cols-md-4 text-center my-5 mx-lg-5"
+                         style="font-family: var(--cs-nb-text-font); color: var(--cs-highlight-font-color)">
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">Java 8</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fas fa-leaf fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">Spring 5</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-angular fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">Angular 12</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fas fa-database fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">SQL</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-aws fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">AWS</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-docker fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">Docker</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fas fa-power-off fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">Spring Boot</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-jenkins"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">CI/CD</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">HTML 5</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">CSS 3</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fas fa-project-diagram fa-sm"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">GraphQL</p>
+                            </div>
+                        </div>
+
+                        <div class="tech">
+                            <div class="fa-def">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div>
+                                <p class="hc f-2 fw-6">Kafka</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </section>
+    <!-- End About Me Section -->
 
-    <script src="./js/script.js"></script>
+    <!-- Education & Experience Section -->
+    <a id="ed-ex">&nbsp;</a>
+    <section class="spacer-lg">
+        <div class="container d-flex justify-content-center mt-5 p-5">
+            <div class="container">
+                <div class="heading">
+                    <div>Education & Experience</div>
+                </div>
+                <div class="container"
+                     style="font-family: var(--cs-logo-text-font); color: var(--cs-primary-font-color)">
+                    <div class="mt-5">
+                        <div class="mt-3 sub-head">Education</div>
+                        <div class="p-2 mt-3">
+                            <div>
+                                I hold a master's degree in computer application from Guru Gobind Singh Indraprastha
+                                University.
+                            </div>
+                            <div class="row row-cols-2 text-center mt-4">
+                                <div class="mt-2 ico">
+                                    <div style="font-size: 2.5rem;">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="shrink">
+                                        <p>MCA</p>
+                                        <p>2007 - 2010</p>
+                                        <p>GGSIPU</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2 ico">
+                                    <div style="font-size: 2.5rem;">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="shrink">
+                                        <p>BCA</p>
+                                        <p>2004 - 2007</p>
+                                        <p>GGSIPU</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <div class="mt-3 sub-head">Experience</div>
+                        <div class="p-2 mt-3">
+                            <div>
+                                I'm very fortunate that I got the opportunity to work with the following organisations.
+                            </div>
+                            <div class="row justify-content-evenly mt-3">
+
+                                <div class="col-md-6 ico">
+                                    <div class="card my-3">
+                                        <div class="fa-def ms-3">
+                                            <i class="fas fa-ship"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Maersk</h5>
+                                            <div class="card-subtitle text-muted">Sr. Software Engineer</div>
+                                            <div class="card-subtitle mb-2 text-muted">2021 - Current</div>
+                                            <p class="card-text">
+                                                Managing customer journey for handling orders by gathering the shipping
+                                                instructions, validating and processing bill of lading.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 ico">
+                                    <div class="card my-3">
+                                        <div class="fa-def ms-3">
+                                            <i class="fas fa-file-signature"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">BlackRock</h5>
+                                            <div class="card-subtitle text-muted">Analyst</div>
+                                            <div class="card-subtitle mb-2 text-muted">2017 - 2021</div>
+                                            <p class="card-text">
+                                                Developed Swing automation framework; enables the developers and testers
+                                                to test
+                                                the Swing front-end using the framework.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 ico">
+                                    <div class="card my-3">
+                                        <div class="fa-def ms-3">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">RBS</h5>
+                                            <div class="card-subtitle text-muted">Software Developer</div>
+                                            <div class="card-subtitle mb-2 text-muted">2014 - 2016</div>
+                                            <p class="card-text">
+                                                Venture was a reporting tool used to get positions. Flow consists of
+                                                upstream
+                                                raw data, refined and served to users.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 ico">
+                                    <div class="card my-3">
+                                        <div class="fa-def ms-3">
+                                            <i class="fas fa-wallet"></i>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Amdocs</h5>
+                                            <div class="card-subtitle text-muted">Subject Matter Expert</div>
+                                            <div class="card-subtitle mb-2 text-muted">2011 - 2014</div>
+                                            <p class="card-text">
+                                                Different tools for mobile wallet payments. Project's focus was the
+                                                mobile
+                                                wallet payments billing handling.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Education & Experience Section -->
+
+</div>
+<!-- End Main Body -->
+
+<!-- Footer -->
+<div class="fluid-container" style="border-top: 1px solid var(--cs-secondary-bg-color); margin-top: 200px">
+    <footer class="bd-footer cs-light-bg py-5 mt-5">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-8 col-md-12 col-lg-3 mb-3 mx-auto px-5">
+                    <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
+                       aria-label="Bootstrap">
+                        <a class="logo" href="#">G</a>
+                        <span class="fs-5 mx-auto name">Gagandeep Singh</span>
+                    </a>
+                    <ul class="list-unstyled small text-muted">
+                        <li class="mb-2 about">Designed and built with all the love in the world by
+                            <span style="font-family: var(--cs-nb-text-font);
+                            color: var(--cs-highlight-font-color)">Gagandeep Singh</span>
+                        </li>
+                        <li class="mb-2 about">Currently v1.0.0</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-3">
+
+                    <div class="row">
+
+                        <div class="col-6 mb-3 px-5">
+                            <h5>Links</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#">Home</a></li>
+                                <li class="mb-2"><a href="#about-me">About Me</a></li>
+                                <li class="mb-2"><a href="#ed-ex">Education & Experience</a></li>
+                                <li class="mb-2"><a href="html/projects/projects-index.html">Projects</a></li>
+                                <li class="mb-2"><a href="html/blog/blog-index.html">Blog</a></li>
+                                <li class="mb-2"><a href="Resume.docx">Resume</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 mb-3 px-5">
+                            <h5>Guides</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#">Guide 1</a></li>
+                                <li class="mb-2"><a href="#">Guide 2</a></li>
+                                <li class="mb-2"><a href="#">Guide 3</a></li>
+                                <li class="mb-2"><a href="#">Guide 4</a></li>
+                                <li class="mb-2"><a href="#">Guide 5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="row">
+
+                        <div class="col-6 mb-3 px-5">
+                            <h5>Projects</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#">Project 1</a></li>
+                                <li class="mb-2"><a href="#">Project 2</a></li>
+                                <li class="mb-2"><a href="#">Project 3</a></li>
+                                <li class="mb-2"><a href="#">Project 4</a></li>
+                                <li class="mb-2"><a href="#">Project 5</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 mb-3 px-5">
+                            <h5>Favorite</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#">Algorithms</a></li>
+                                <li class="mb-2"><a href="#">Java Streams</a></li>
+                                <li class="mb-2"><a href="#">Kafka</a></li>
+                                <li class="mb-2"><a href="#">Reactive</a></li>
+                                <li class="mb-2"><a href="#">Cheat Sheets</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+</div>
+<!-- End Footer -->
+
+
+<!-- Java Scripts -->
+
+<!-- Bootstrap CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<!-- End Bootstrap CDN -->
+
+<!-- Highlighter JS -->
+<script src="packages/highlight/highlight.min.js"></script>
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<!-- End Highlighter JS -->
+
+<!-- Highlighter Script -->
+<script>
+    hljs.highlightAll();
+    hljs.addPlugin(new CopyButtonPlugin());
+</script>
+<!-- End Highlighter Script -->
+
+<!-- Custom script -->
+<script src="./js/script.js"></script>
+<!-- End Custom script -->
+
+<!-- End Java Scripts -->
 
 </body>
 
