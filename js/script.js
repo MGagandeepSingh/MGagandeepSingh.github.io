@@ -1,8 +1,6 @@
 function myFunction() {
     var x = document.getElementById("nav-side-menu");
     var burger = document.getElementById("burger");
-    var hey = document.getElementById("hey");
-    var about = document.getElementById("about");
 
     if (x.style.display === "block") {
         x.style.display = "none";
@@ -23,8 +21,8 @@ function myFunction() {
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 50) {
-        $('header').addClass('darkHeader');
+        $('nav').addClass('darkHeader');
     } else {
-        $('header').removeClass('darkHeader');
+        $('nav').removeClass('darkHeader');
     }
 });
