@@ -1,395 +1,362 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --primary-color: #142330;
-  --white: #ffffff;
-  --secondary-color: #ff7582;
-  --hyperlink: #ffffff;
-  --hover: #c56c86;
-  --visited: #ffffff;
-  --grays: #b0c0bc;
-  --off-color: #725a7a;
-  --shadows: #2b3f50;
 
-  --primary-font: "Lexend Deca", sans-serif;
-  --primary-font-default-size: 14px;
-  --secondary-font: "MuseoModerno", cursive;
-  --primary-font-default-size: 13px;
+    --cs-bg-color: #142330;
+    --cs-secondary-bg-color: #2B3F50;
 
-  --font-size-lg: 3rem;
-  --font-size-md: 2.5rem;
-  --font-size-xmd: 2rem;
-  --font-size-sm: 1rem;
-  --font-size-smd: 1.2rem;
+    --cs-primary-font-color: #B0C0BC;
+    --cs-secondary-font-color: #FFFFFF;
+    --cs-highlight-font-color: #FF7582;
+    --cs-highlight-light-font-color: #C56C86;
 
-  --full-width: 100vw;
-  --secondary-width: 95vw;
-  --blog-width: 80vw;
-  --full-height: 100vh;
+    --cs-dark-100: rgb(0, 0, 0, 1);
+    --cs-dark-200: rgb(0, 0, 0, .8);
+    --cs-dark-300: rgb(0, 0, 0, .6);
+    --cs-dark-400: rgb(0, 0, 0, .4);
+    --cs-dark-500: rgb(0, 0, 0, .2);
+    --cs-dark-600: rgb(0, 0, 0, .1);
 
-  --nav-spacing: 50px;
+    --cs-light-100: rgb(255, 255, 255, 1);
+    --cs-light-200: rgb(255, 255, 255, .8);
+    --cs-light-300: rgb(255, 255, 255, .6);
+    --cs-light-400: rgb(255, 255, 255, .4);
+    --cs-light-500: rgb(255, 255, 255, .2);
+    --cs-light-600: rgb(255, 255, 255, .1);
 
-  --primary-radius: 7px;
-  --secondary-radius: 5px;
+    --cs-primary-text-font: 'Roboto', sans-serif;
+    --cs-primary-text-font-size: 1rem;
+    --cs-primary-text-font-weight: 300;
+    --cs-primary-text-font-lh: 1.6;
+
+    --cs-primary-code-font: 'Source Code Pro', monospace;
+    --cs-primary-code-font-size: 1rem;
+    --cs-primary-code-font-weight: 400;
+    --cs-primary-code-font-lh: 1.6;
+
+    --cs-logo-text-font: "MuseoModerno", cursive;
+    --cs-logo-text-font-size: 40px;
+    --cs-logo-text-font-weight: 900;
+
+    --cs-nb-text-font: 'Lexend Deca', sans-serif;
+    --cs-nb-text-font-size: .8rem;
+    --cs-nb-text-font-weight: 500;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scrollbar-color: var(--primary-color);
+*, :before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: var(--primary-color);
-  color: var(--white);
-  font-family: var(--primary-font);
-  font-size: var(--primary-font-default-size);
-}
-
-header {
-  position: fixed;
-  width: var(--full-width);
-}
-
-.nav-items a {
-  color: var(--grays);
-  text-decoration: none;
-}
-
-.nav-items a:active,
-.nav-items a:visited {
-  color: var(--grays);
-  text-decoration: none;
-}
-
-.nav-items a:hover {
-  color: var(--hover);
-  text-decoration: underline;
-}
-
-a,
-a:active,
-a:visited {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-ul,
-ol {
-  list-style-position: inside;
-  list-style: outside none none;
-}
-
-header .button {
-  margin-left: var(--nav-spacing);
-  padding: 10px 20px;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: var(--secondary-radius);
-}
-
-header button:hover {
-  margin-left: var(--nav-spacing);
-  padding: 10px 20px;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: var(--secondary-radius);
-}
-
-.nav-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  max-width: var(--secondary-width);
-}
-
-.nav-items {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.nav-items ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.nav-items ul li:not(:first-of-type) {
-  margin-left: var(--nav-spacing);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-light-100);
+    font-family: var(--cs-primary-text-font);
+    font-size: var(--cs-primary-text-font-size);
+    font-weight: var(--cs-primary-text-font-weight);
+    line-height: var(--cs-primary-text-font-lh);
 }
 
 .logo {
-  font-family: "MuseoModerno", cursive;
-  font-size: 40px;
-  font-weight: 900;
-  padding: 10px;
-  color: var(--secondary-color);
+    font-family: var(--cs-logo-text-font);
+    font-size: var(--cs-logo-text-font-size);
+    font-weight: var(--cs-logo-text-font-weight);
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
 }
 
-.container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  min-height: var(--full-height);
+a.logo:visited {
+    color: var(--cs-highlight-font-color);
 }
 
-.hello {
-  color: var(--secondary-color);
-  font-family: var(--secondary-font);
-  font-size: var(--font-size-sm);
+a.logo:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
 }
 
-.name {
-  font-size: var(--font-size-lg);
+nav {
+    font-family: var(--cs-nb-text-font);
+    font-size: var(--cs-nb-text-font-size);
+    font-weight: var(--cs-nb-text-font-weight);
+    color: var(--cs-primary-font-color);
 }
 
-.title {
-  font-size: var(--font-size-md);
-  color: var(--grays);
-  font-family: var(--secondary-font);
+.navbar-toggler {
+    border-color: var(--cs-highlight-font-color);
+    color: var(--cs-highlight-font-color);
 }
 
-.about {
-  max-width: 600px;
-  margin-top: 15px;
-  color: var(--grays);
-  font-family: var(--secondary-font);
-  font-size: var(--font-size-sm);
+.navbar-nav .nav-link.active {
+    color: var(--cs-highlight-font-color);
 }
 
-.container button {
-  font-size: var(--font-size-smd);
-  margin-top: 50px;
-  padding: 20px 30px;
-  border: 1px solid var(--secondary-color);
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border-radius: var(--secondary-radius);
+.navbar-nav a,
+.navbar-nav a:active,
+.navbar-nav a:visited {
+    color: var(--cs-primary-font-color);
+    text-decoration: none;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  color: var(--grays);
-  margin-top: 50px;
+.navbar-nav a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
 }
 
-.card {
-  flex: 1 0 21%;
-  max-width: 19%;
-  padding: 1.5rem;
-  margin: 20px;
-  border-radius: 7px;
-  box-shadow: 0 3.2px 7.2px 0 var(--off-color), 0 0.6px 1.8px 0 var(--off-color) !important;
+.nav-link .button {
+    padding: 10px 20px;
+    border: 1px solid var(--cs-highlight-font-color);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-highlight-font-color);
+    border-radius: 5px;
 }
 
-.card-head {
-  display: flex;
-  flex-wrap: row wrap;
-  align-items: center;
-}
-
-.card-icon {
-  font-size: 15px;
-  margin-right: 10px;
-}
-.space-above {
-  padding-top: 10px;
-}
-
-.border-above {
-  border-top: 1px solid var(--grays);
-  margin-top: 10px;
-}
-
-.vis-sm {
-  display: none;
-}
-
-#nav-side-menu {
-  display: none;
+.nav-link .button:hover {
+    padding: 10px 20px;
+    border: 1px solid var(--cs-highlight-font-color);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-highlight-light-font-color);
+    border-radius: 5px;
+    text-decoration: underline;
 }
 
 .darkHeader {
-  background-color: var(--primary-color);
-  border-bottom: 1px solid var(--shadows);
+    background-color: var(--cs-bg-color);
+    border-bottom: 1px solid var(--cs-secondary-bg-color);
 }
 
-.inner-container {
-  display: flex;
-  flex-flow: column wrap;
-  margin: auto;
-  max-width: 50vw;
-  color: var(--secondary-color);
+#img-col img {
+    mix-blend-mode: luminosity;
+    border-radius: 17px;
+    padding: 10px;
 }
 
-.inner-container h1 {
-  font-size: 1.6rem;
-  padding-left: 5rem;
-  margin-bottom: var(--nav-spacing);
-}
-
-.inner-container h1::after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: -7px;
-  width: 500px;
-  height: 1px;
-  margin-left: 20px;
-  background-color: var(--secondary-color);
-  z-index: -1;
-}
-
-.close-container {
-  display: flex;
-  flex-flow: column wrap;
-  margin: auto;
-}
-
-.about img {
-  mix-blend-mode: luminosity;
-  max-width: 250px;
-  border-radius: var(--primary-radius);
-  margin-bottom: var(--nav-spacing);
-  margin-right: 50px;
-  z-index: -1;
-}
-
-.sided {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.sided p {
-  max-width: 300px;
-  padding-left: 0 0 0 50px;
-}
-
-.mb {
-  margin-bottom: var(--nav-spacing);
-}
-
-.tech-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 600px;
-}
-
-.tech-container-col {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-  max-width: 600px;
-}
-
-.tech {
-  flex: 1 0 17%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-  margin: 10px;
-}
-
-.tech-row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 20px;
-}
-
-.tech-row-rev {
-  display: flex;
-  flex-flow: row-reverse wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 20px;
+#ed-ex {
+    font-family: var(--cs-logo-text-font);
 }
 
 .fa-sm {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 .fa-def {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
-.footer-container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  margin-top: 200px;
+.spacer-lg {
+    margin-top: 100px;
 }
 
-.social ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: space-around;
+.shrink {
+    line-height: .3rem;
 }
 
-.social ul li {
-  font-size: 2rem;
-  padding: 10px 20px;
+.hey {
+    color: var(--cs-highlight-font-color);
+    font-family: var(--cs-logo-text-font);
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-.social svg {
-  max-width: 20px;
+.name {
+    font-family: var(--cs-nb-text-font);
 }
 
-.section-space {
-  margin-top: 200px;
+.title {
+    color: var(--cs-primary-font-color);
+    font-family: var(--cs-logo-text-font);
+    font-weight: bold;
 }
 
-.edex {
-  max-width: 600px;
-  color: var(--grays);
-  font-family: var(--secondary-font);
-  font-size: var(--font-size-sm);
+.about {
+    margin-top: 15px;
+    color: var(--cs-primary-font-color);
+    font-family: var(--cs-logo-text-font);
 }
 
-.inst {
-  font-size: 4rem;
-  margin-right: 50px;
+footer a, #hey a,
+footer a:active, #hey a:active,
+footer a:visited, #hey a:visited {
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
 }
 
-.inst-rev {
-  font-size: 4rem;
-  margin-left: 50px;
+footer a:hover, #hey a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
 }
 
-.inst-desc {
-  color: var(--grays);
-  max-width: 400px;
+#hey button {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    padding: 20px 30px;
+    border: 1px solid var(--cs-highlight-font-color);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-highlight-font-color);
+    border-radius: 5px;
 }
 
-.name-h {
-  color: var(--secondary-color);
-  font-family: var(--secondary-font);
-  font-size: 15px;
+.about-me {
+    color: var(--cs-highlight-font-color);
+}
+
+.about-me .h1 {
+    font-family: var(--cs-nb-text-font);
+    font-size: 1.6rem;
+    padding-left: 5rem;
+}
+
+.heading {
+    font-family: var(--cs-nb-text-font);
+    font-weight: bold;
+    color: var(--cs-highlight-font-color);
+}
+
+.card {
+    background-color: var(--cs-bg-color);
+    border-color: var(--cs-secondary-bg-color);
+}
+
+.border {
+border-color: var(--cs-secondary-bg-color)
+}
+
+.sub-head {
+    font-weight: bold;
+}
+
+.ico {
+    font-family: var(--cs-nb-text-font);
+    color: var(--cs-highlight-font-color);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.card-text {
+    color: var(--cs-primary-font-color);
+}
+
+.btn, .badge {
+    background-color: var(--cs-bg-color);
+    border: 1px solid var(--cs-highlight-font-color);
+    color: var(--cs-highlight-font-color);
+    font-family: var(--cs-primary-text-font);
+}
+
+.badge {
+    border: none;
+    background-color: #96CDFF;
+    color: var(--cs-bg-color);
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+@media (max-width: 576px) {
+    #hey {
+        margin-left: 25px;
+    }
+
+    .about {
+        max-width: 250px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 3rem;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+    }
+    #img-col img {
+        max-width: 15rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        max-width: 350px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 3.5rem;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+    #img-col img {
+        max-width: 17rem;
+    }
+    .besides-column {
+        min-width: 350px;
+    }
+}
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        max-width: 480px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 3.5rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+    #img-col img {
+        max-width: 25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        max-width: 600px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 12.5rem;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+    #img-col img {
+        max-width: 25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .name {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        font-weight: normal;
+        max-width: 600px;
+    }
+    #img-col img {
+        max-width: 25rem;
+    }
 }
