@@ -91,6 +91,30 @@ nav {
     color: var(--cs-highlight-font-color);
 }
 
+.anchor a,
+.anchor a:active,
+.anchor a:visited {
+    color: var(--cs-primary-font-color);
+    text-decoration: none;
+}
+
+.anchor a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+}
+
+.breadcrumb a,
+.breadcrumb a:active,
+.breadcrumb a:visited {
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+}
+
+
 .navbar-nav a,
 .navbar-nav a:active,
 .navbar-nav a:visited {
@@ -249,6 +273,24 @@ border-color: var(--cs-secondary-bg-color)
     color: var(--cs-bg-color);
     border-radius: 3px;
     font-weight: 400;
+}
+
+.table-dark {
+    font-size: 1rem;
+    --bs-table-bg: var(--cs-bg-color);
+}
+
+.table>thead {
+    color: var(--cs-highlight-font-color);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: rgb(150, 205, 255, .1);
+    color: var(--cs-secondary-font-color);
+}
+
+.table>:not(caption)>*>* {
+     border-bottom-width: 0px;
 }
 
 @media (max-width: 576px) {
