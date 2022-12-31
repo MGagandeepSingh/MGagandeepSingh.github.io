@@ -103,12 +103,27 @@ nav {
     text-decoration: underline;
 }
 
+.anchor-dark a,
+.anchor-dark a:active,
+.anchor-dark a:visited {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.anchor-dark a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
 .breadcrumb a,
 .breadcrumb a:active,
 .breadcrumb a:visited {
     color: var(--cs-highlight-font-color);
     text-decoration: none;
 }
+
 .breadcrumb a:hover {
     color: var(--cs-highlight-font-color);
     text-decoration: underline;
@@ -242,7 +257,7 @@ footer a:hover, #hey a:hover {
 }
 
 .border {
-border-color: var(--cs-secondary-bg-color)
+    border-color: var(--cs-secondary-bg-color)
 }
 
 .sub-head {
@@ -280,17 +295,31 @@ border-color: var(--cs-secondary-bg-color)
     --bs-table-bg: var(--cs-bg-color);
 }
 
-.table>thead {
+.table > thead {
     color: var(--cs-highlight-font-color);
 }
 
-.table-striped>tbody>tr:nth-of-type(odd)>* {
+.table-striped > tbody > tr:nth-of-type(odd) > * {
     --bs-table-accent-bg: rgb(150, 205, 255, .1);
     color: var(--cs-secondary-font-color);
 }
 
-.table>:not(caption)>*>* {
-     border-bottom-width: 0px;
+.table > :not(caption) > * > * {
+    border-bottom-width: 0;
+}
+
+.svg-container {
+    width: inherit;
+    height: inherit;
+    resize: both;
+    /*overflow: auto;*/
+    margin: auto;
+    padding-top: 4rem;
+}
+
+svg {
+    width: 70%;
+    height: 70%;
 }
 
 @media (max-width: 576px) {
@@ -310,8 +339,14 @@ border-color: var(--cs-secondary-bg-color)
     .heading {
         font-size: 1.3rem;
     }
+
     #img-col img {
         max-width: 15rem;
+    }
+
+    svg {
+        width: 95%;
+        height: 95%;
     }
 }
 
@@ -332,11 +367,18 @@ border-color: var(--cs-secondary-bg-color)
     .heading {
         font-size: 1.4rem;
     }
+
     #img-col img {
         max-width: 17rem;
     }
+
     .besides-column {
         min-width: 350px;
+    }
+
+    svg {
+        width: 95%;
+        height: 95%;
     }
 }
 
@@ -357,8 +399,14 @@ border-color: var(--cs-secondary-bg-color)
     .heading {
         font-size: 1.5rem;
     }
+
     #img-col img {
         max-width: 25rem;
+    }
+
+    svg {
+        width: 90%;
+        height: 90%;
     }
 }
 
@@ -379,8 +427,14 @@ border-color: var(--cs-secondary-bg-color)
     .heading {
         font-size: 1.6rem;
     }
+
     #img-col img {
         max-width: 25rem;
+    }
+
+    svg {
+        width: 60%;
+        height: 60%;
     }
 }
 
@@ -398,7 +452,13 @@ border-color: var(--cs-secondary-bg-color)
         font-weight: normal;
         max-width: 600px;
     }
+
     #img-col img {
         max-width: 25rem;
+    }
+
+    svg {
+        width: 50%;
+        height: 50%;
     }
 }
