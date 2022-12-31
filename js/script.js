@@ -19,10 +19,19 @@ function myFunction() {
     }
 }
 
+const breadcrumb = document.querySelectorAll('[aria-label="breadcrumb"]')
+
+
 $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-        $('nav').addClass('darkHeader');
-    } else {
-        $('nav').removeClass('darkHeader');
+    console.log('What do we do' + breadcrumb);
+    if(breadcrumb) {
+        if ($(this).scrollTop() > 50) {
+            $('nav').addClass('darkHeader');
+        } else {
+            $('nav').removeClass('darkHeader');
+        }
     }
 });
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
