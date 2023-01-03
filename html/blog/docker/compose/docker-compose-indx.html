@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fav Icon -->
-    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../../favicon.ico">
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,14 +21,14 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Highlighter JS -->
-    <link rel="stylesheet" href="../../../packages/highlight/styles/atom-one-dark-reasonable.min.css">
+    <link rel="stylesheet" href="../../../../packages/highlight/styles/atom-one-dark-reasonable.min.css">
     <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"/>
 
     <!-- Icons -->
-    <link rel="stylesheet" type="text/css" href="../../../fonts/css/all.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../fonts/css/all.css"/>
 
     <!-- Style -->
-    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
     <title>Gagandeep Singh</title>
 
 </head>
@@ -38,7 +38,7 @@
 <!-- Header -->
 <nav class="navbar navbar-expand-lg sticky-top px-md-5">
     <div class="container-fluid">
-        <a class="navbar-brand logo" href="../../../index.html">G</a>
+        <a class="navbar-brand logo" href="../../../../index.html">G</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -47,13 +47,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto d-flex justify-content-between">
-                <a class="nav-link mx-lg-4 my-sm-4" aria-current="page" href="../../../index.html">Introduction</a>
-                <a class="nav-link mx-lg-4 my-sm-4" href="../../../index.html#about-me">About Me</a>
-                <a class="nav-link mx-lg-4 my-sm-4" href="../../../index.html#ed-ex">Education & Experience</a>
-                <a class="nav-link mx-lg-4 my-sm-4" href="../../projects/projects-index.html">Projects</a>
-                <a class="nav-link mx-lg-4 my-sm-4 active" href="../blog-index.html">Blog</a>
+                <a class="nav-link mx-lg-4 my-sm-4" aria-current="page" href="../../../../index.html">Introduction</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="../../../../index.html#about-me">About Me</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="../../../../index.html#ed-ex">Education & Experience</a>
+                <a class="nav-link mx-lg-4 my-sm-4" href="../../../projects/projects-index.html">Projects</a>
+                <a class="nav-link mx-lg-4 my-sm-4 active" href="../../blog-index.html">Blog</a>
                 <div class="nav-link my-sm-4">
-                    <a class="button" href="../../../Resume.docx" target="_blank"
+                    <a class="button" href="../../../../Resume.docx" target="_blank"
                        rel="noopener noreferrer">Resume</a>
                 </div>
             </div>
@@ -66,34 +66,127 @@
 <div class="container spacer-lg">
 
 
-    <!-- Breadcrumbs -->
-    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
-         aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../blog-index.html">Blog</a></li>
-            <li class="breadcrumb-item active">Java</li>
-        </ol>
-    </nav>
-    <!-- End Breadcrumbs -->
-
-    <h2 class="my-4 about-me">Java Topics</h2>
+    <h2 class="heading">Docker Compose Files</h2>
     <hr>
 
-    <section class="container anchor">
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title"><a href="primitive-types.html">Java Primitive Types</a></h5>
-                <h6 class="card-subtitle mb-2 text-muted">Explanation of Java's Primitive Data Types</h6>
-            </div>
-        </div>
-        <div class="card mt-3">
-            <div class="card-body">
-                <h5 class="card-title"><a href="signed-vs-unsigned.html">Signed v/s Unsigned Types</a></h5>
-                <h6 class="card-subtitle mb-2 text-muted">Understanding what are signed and unsigned data type</h6>
-            </div>
-        </div>
-    </section>
+    <div class="row px-5 mt-5">
 
+        <section class="container">
+            <div class="collapse-btn">
+                <div class="m-2" data-bs-toggle="collapse" 
+                href="#redis-collapse" role="button" aria-expanded="false" aria-controls="redis-collapse">Redis Cache</div>
+                <div class="collapse container" id="redis-collapse">
+                    <pre class="mx-auto">
+                        <code class="language-yaml">version: '3.8'
+services:
+    redis:
+        image: redis/redis-stack:6.2.4-v3
+        container-name: 'redis-stack-6379'
+        command: redis-server --requirepass admin
+        restart: always
+        volumes:
+        - cache:/var/lib/redis/data
+        ports:
+        - '6379:6379'
+volumes:
+    cache:
+        driver: local   </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-4">
+            <div class="collapse-btn">
+                <div class="m-2" data-bs-toggle="collapse" 
+                        href="#postgres-collapse" role="button" aria-expanded="false" 
+                        aria-controls="postgres-collapse">
+                    Postgres DB
+                </div>
+                <div class="collapse container" id="postgres-collapse">
+                    <pre class="mx-auto">
+                        <code class="language-yaml">version: '3.8'
+services:
+    db: 
+        image: postgres:latest
+        restart: always
+        environment:
+        - POSTGRES_USER=admin
+        - POSTGRES_PASSWORD=admin
+        volumes:
+        - db:/var/lib/postgres/data
+        ports:
+        - '5433:5432'
+volumes:
+    db:
+        driver: local   </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-4">
+            <div class="collapse-btn">
+                <div class="m-2" data-bs-toggle="collapse" 
+                        href="#mongodb-collapse" role="button" aria-expanded="false" 
+                        aria-controls="mongodb-collapse">
+                    Mongo DB
+                </div>
+                <div class="collapse container" id="mongodb-collapse">
+                    <pre class="mx-auto">
+                        <code class="language-yaml">version: '3.8'
+services:
+    database: 
+        image: 'mongo'
+        container_name: 'my-mongo-container'
+        restart: always
+        environment:
+        - MONGO_INITDB_DATABASE=sandbox
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=admin
+        volumes:
+        - database:/var/lib/mongo/data
+        ports:
+        - '27019:27017'
+volumes:
+    db:
+        driver: local   </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-4">
+            <div class="collapse-btn">
+                <div class="m-2" data-bs-toggle="collapse" 
+                        href="#kafka-collapse" role="button" aria-expanded="false" 
+                        aria-controls="kafka-collapse">
+                    Kafka
+                </div>
+                <div class="collapse container" id="kafka-collapse">
+                    <pre class="mx-auto">
+                        <code class="language-yaml">version: '3.8'
+services:
+    database: 
+        image: 'mongo'
+        container_name: 'my-mongo-container'
+        restart: always
+        environment:
+        - MONGO_INITDB_DATABASE=sandbox
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=admin
+        volumes:
+        - database:/var/lib/mongo/data
+        ports:
+        - '27019:27017'
+volumes:
+    db:
+        driver: local   </code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 <!-- End Main Body -->
 
@@ -107,7 +200,7 @@
                 <div class="col-sm-8 col-md-12 col-lg-3 mb-3 mx-auto px-5">
                     <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
                        aria-label="Bootstrap">
-                        <a class="logo" href="../../../index.html">G</a>
+                        <a class="logo" href="../../../../index.html">G</a>
                         <span class="fs-5 mx-auto name">Gagandeep Singh</span>
                     </a>
                     <ul class="list-unstyled small text-muted">
@@ -125,18 +218,18 @@
                         <div class="col-6 mb-3 px-5">
                             <h5>Links</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><a href="../../../index.html">Home</a></li>
-                                <li class="mb-2"><a href="../../../index.html#about-me">About Me</a></li>
-                                <li class="mb-2"><a href="../../../index.html#ed-ex">Education & Experience</a></li>
-                                <li class="mb-2"><a href="../../projects/projects-index.html">Projects</a></li>
-                                <li class="mb-2"><a href="../blog-index.html">Blog</a></li>
-                                <li class="mb-2"><a href="../../../Resume.docx">Resume</a></li>
+                                <li class="mb-2"><a href="../../../../index.html">Home</a></li>
+                                <li class="mb-2"><a href="../../../../index.html#about-me">About Me</a></li>
+                                <li class="mb-2"><a href="../../../../index.html#ed-ex">Education & Experience</a></li>
+                                <li class="mb-2"><a href="../../../projects/projects-index.html">Projects</a></li>
+                                <li class="mb-2"><a href="#">Blog</a></li>
+                                <li class="mb-2"><a href="../../../../Resume.docx">Resume</a></li>
                             </ul>
                         </div>
                         <div class="col-6 mb-3 px-5">
                             <h5>Guides</h5>
                             <ul class="list-unstyled">
-                                <li class="mb-2"><a href="../../blog/docker/compose/docker-compose-indx.html">Docker Compose</a></li>
+                                <li class="mb-2"><a href="#">Docker Compose</a></li>
                                 <li class="mb-2"><a href="#">Guide 2</a></li>
                                 <li class="mb-2"><a href="#">Guide 3</a></li>
                                 <li class="mb-2"><a href="#">Guide 4</a></li>
@@ -189,7 +282,7 @@
 <!-- End Bootstrap CDN -->
 
 <!-- Highlighter JS -->
-<script src="../../../packages/highlight/highlight.min.js"></script>
+<script src="../../../../packages/highlight/highlight.min.js"></script>
 <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
 <!-- End Highlighter JS -->
 
@@ -201,7 +294,7 @@
 <!-- End Highlighter Script -->
 
 <!-- Custom script -->
-<script src="../../../js/script.js"></script>
+<script src="../../../../js/script.js"></script>
 <!-- End Custom script -->
 
 <!-- End Java Scripts -->

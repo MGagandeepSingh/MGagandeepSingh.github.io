@@ -58,6 +58,20 @@ body {
     line-height: var(--cs-primary-text-font-lh);
 }
 
+pre code.hljs {
+    border-radius: 10px
+}
+
+.hljs-copy-button {
+    top: 2.5em;
+}
+
+code {
+    font-family: var(--cs-primary-code-font);
+    font-size: var(--cs-primary-code-font-size);
+    font-weight: var(--cs-primary-code-font-weight);
+}
+
 .logo {
     font-family: var(--cs-logo-text-font);
     font-size: var(--cs-logo-text-font-size);
@@ -320,6 +334,15 @@ footer a:hover, #hey a:hover {
 svg {
     width: 70%;
     height: 70%;
+}
+
+.collapse-btn {
+    color: var(--cs-primary-font-color);
+    border: 1px solid var(--cs-primary-font-color); 
+    border-radius: 5px; 
+    padding: 7px;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 @media (max-width: 576px) {
