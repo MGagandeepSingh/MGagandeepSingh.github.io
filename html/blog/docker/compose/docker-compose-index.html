@@ -35,7 +35,7 @@
 
 <body>
 
-<!-- Header -->
+<!-- Header / Navigation Bar -->
 <nav class="navbar navbar-expand-lg sticky-top px-md-5">
     <div class="container-fluid">
         <a class="navbar-brand logo" href="../../../../index.html">G</a>
@@ -66,11 +66,15 @@
 <div class="container spacer-lg">
 
 
+    <!-- Body Heading -->
     <h2 class="heading">Docker Compose Files</h2>
     <hr>
+    <!-- End Body Heading -->
 
+    <!-- Content Section -->
     <div class="row px-5 mt-5">
 
+        <!-- Redis Docker Compose Code Section -->
         <section class="container">
             <div class="collapse-btn">
                 <div class="m-2" data-bs-toggle="collapse" 
@@ -95,7 +99,9 @@ volumes:
                 </div>
             </div>
         </section>
+        <!-- End Redis Docker Compose Code Section -->
 
+        <!-- Postgres Docker Compose Code Section -->
         <section class="container mt-4">
             <div class="collapse-btn">
                 <div class="m-2" data-bs-toggle="collapse" 
@@ -124,7 +130,9 @@ volumes:
                 </div>
             </div>
         </section>
+        <!-- End Postgres Docker Compose Code Section -->
 
+        <!-- Mongo Docker Compose Code Section -->
         <section class="container mt-4">
             <div class="collapse-btn">
                 <div class="m-2" data-bs-toggle="collapse" 
@@ -155,7 +163,9 @@ volumes:
                 </div>
             </div>
         </section>
+        <!-- End Mongo Docker Compose Code Section -->
 
+        <!-- Kafka Docker Compose Code Section -->
         <section class="container mt-4">
             <div class="collapse-btn">
                 <div class="m-2" data-bs-toggle="collapse" 
@@ -167,26 +177,68 @@ volumes:
                     <pre class="mx-auto">
                         <code class="language-yaml">version: '3.8'
 services:
-    database: 
-        image: 'mongo'
-        container_name: 'my-mongo-container'
-        restart: always
-        environment:
-        - MONGO_INITDB_DATABASE=sandbox
-        - MONGO_INITDB_ROOT_USERNAME=admin
-        - MONGO_INITDB_ROOT_PASSWORD=admin
-        volumes:
-        - database:/var/lib/mongo/data
-        ports:
-        - '27019:27017'
-volumes:
-    db:
-        driver: local   </code>
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    hostname: zookeeper
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+  broker:
+    image: confluentinc/cp-server:latest
+    hostname: broker
+    container_name: broker
+    ports:
+      - "9092:9092"
+      - "9101:9101"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_CONFLUENT_LICENSE_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CONFLUENT_BALANCER_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_JMX_PORT: 9101
+      KAFKA_JMX_HOSTNAME: localhost
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker:29092
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      CONFLUENT_METRICS_ENABLE: 'true'
+      CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
+
+  control-center:
+    image: confluentinc/cp-enterprise-control-center:latest
+    hostname: control-center
+    container_name: control-center
+    depends_on:
+      - broker
+    ports:
+      - "9021:9021"
+    environment:
+      CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker:29092'
+      CONTROL_CENTER_REPLICATION_FACTOR: 1
+      CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
+      CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
+      CONFLUENT_METRICS_TOPIC_REPLICATION: 1
+      PORT: 9021        </code>
                     </pre>
                 </div>
             </div>
         </section>
+        <!-- End Kafka Docker Compose Code Section -->
+
     </div>
+    <!-- End Content Section -->
+
 </div>
 <!-- End Main Body -->
 
