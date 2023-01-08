@@ -7,7 +7,7 @@
   "license": "0BSD",
   "scripts": {
     "predeploy": "npm run build",
-+   "deploy": "gh-pages -d build",
++   "deploy": "gatsby build && gh-pages -d public -b main",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
