@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/MGagandeepSingh.github.io"
   plugins: [
     'gatsby-plugin-react-helmet',
   ],
