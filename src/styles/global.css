@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    --cs-bg-color: #142330;
+    --cs-secondary-bg-color: #2B3F50;
+
+    --cs-primary-font-color: #B0C0BC;
+    --cs-secondary-font-color: #FFFFFF;
+    --cs-highlight-font-color: #FF7582;
+    --cs-highlight-light-font-color: #C56C86;
+
+    --cs-dark-100: rgb(0, 0, 0, 1);
+    --cs-dark-200: rgb(0, 0, 0, .8);
+    --cs-dark-300: rgb(0, 0, 0, .6);
+    --cs-dark-400: rgb(0, 0, 0, .4);
+    --cs-dark-500: rgb(0, 0, 0, .2);
+    --cs-dark-600: rgb(0, 0, 0, .1);
+
+    --cs-light-100: rgb(255, 255, 255, 1);
+    --cs-light-200: rgb(255, 255, 255, .8);
+    --cs-light-300: rgb(255, 255, 255, .6);
+    --cs-light-400: rgb(255, 255, 255, .4);
+    --cs-light-500: rgb(255, 255, 255, .2);
+    --cs-light-600: rgb(255, 255, 255, .1);
+
+    --cs-primary-text-font: 'Roboto', sans-serif;
+    --cs-primary-text-font-size: 1rem;
+    --cs-primary-text-font-weight: 300;
+    --cs-primary-text-font-lh: 1.6;
+
+    --cs-primary-code-font: 'Source Code Pro', monospace;
+    --cs-primary-code-font-size: 1rem;
+    --cs-primary-code-font-weight: 400;
+    --cs-primary-code-font-lh: 1.6;
+
+    --cs-logo-text-font: "MuseoModerno", cursive;
+    --cs-logo-text-font-size: 40px;
+    --cs-logo-text-font-weight: 900;
+
+    --cs-nb-text-font: 'Lexend Deca', sans-serif;
+    --cs-nb-text-font-size: .8rem;
+    --cs-nb-text-font-weight: 500;
+}
+
+*, :before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cs-bg-color);
+    color: var(--cs-light-100);
+    font-family: var(--cs-primary-text-font);
+    font-size: var(--cs-primary-text-font-size);
+    font-weight: var(--cs-primary-text-font-weight);
+    line-height: var(--cs-primary-text-font-lh);
+}
+
+pre code.hljs {
+    border-radius: 10px
+}
+
+.hljs-copy-button {
+    top: 2.5em;
+}
+
+code {
+    font-family: var(--cs-primary-code-font);
+    font-size: var(--cs-primary-code-font-size);
+    font-weight: var(--cs-primary-code-font-weight);
+}
+
+.logo {
+    font-family: var(--cs-logo-text-font);
+    font-size: var(--cs-logo-text-font-size);
+    font-weight: var(--cs-logo-text-font-weight);
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
+}
+
+a.logo:visited {
+    color: var(--cs-highlight-font-color);
+}
+
+a.logo:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
+}
+
+nav {
+    font-family: var(--cs-nb-text-font);
+    font-size: var(--cs-nb-text-font-size);
+    font-weight: var(--cs-nb-text-font-weight);
+    color: var(--cs-primary-font-color);
+}
+
+.navbar-toggler {
+    border-color: var(--cs-highlight-font-color);
+    color: var(--cs-highlight-font-color);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--cs-highlight-font-color);
+}
+
+.anchor a,
+.anchor a:active,
+.anchor a:visited {
+    color: var(--cs-primary-font-color);
+    text-decoration: none;
+}
+
+.anchor a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+}
+
+.anchor-dark a,
+.anchor-dark a:active,
+.anchor-dark a:visited {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.anchor-dark a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.breadcrumb a,
+.breadcrumb a:active,
+.breadcrumb a:visited {
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+}
+
+
+.navbar-nav a,
+.navbar-nav a:active,
+.navbar-nav a:visited {
+    color: var(--cs-primary-font-color);
+    text-decoration: none;
+}
+
+.navbar-nav a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+}
+
+.nav-link .button {
+    padding: 10px 20px;
+    border: 1px solid var(--cs-highlight-font-color);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-highlight-font-color);
+    border-radius: 5px;
+}
+
+.nav-link .button:hover {
+    padding: 10px 20px;
+    border: 1px solid var(--cs-highlight-font-color);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-highlight-light-font-color);
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+.darkHeader {
+    background-color: var(--cs-bg-color);
+    border-bottom: 1px solid var(--cs-secondary-bg-color);
+}
+
+#img-col img {
+    mix-blend-mode: luminosity;
+    border-radius: 17px;
+    padding: 10px;
+}
+
+#ed-ex {
+    font-family: var(--cs-logo-text-font);
+}
+
+.fa-sm {
+    font-size: 2.5rem;
+}
+
+.fa-def {
+    font-size: 3rem;
+}
+
+.spacer-lg {
+    margin-top: 100px;
+}
+
+.shrink {
+    line-height: .3rem;
+}
+
+.hey {
+    color: var(--cs-highlight-font-color);
+    font-family: var(--cs-logo-text-font);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.name {
+    font-family: var(--cs-nb-text-font);
+}
+
+.title {
+    color: var(--cs-primary-font-color);
+    font-family: var(--cs-logo-text-font);
+    font-weight: bold;
+}
+
+.about {
+    margin-top: 15px;
+    color: var(--cs-primary-font-color);
+    font-family: var(--cs-logo-text-font);
+}
+
+footer a, #hey a,
+footer a:active, #hey a:active,
+footer a:visited, #hey a:visited {
+    color: var(--cs-highlight-font-color);
+    text-decoration: none;
+}
+
+footer a:hover, #hey a:hover {
+    color: var(--cs-highlight-font-color);
+    text-decoration: underline;
+}
+
+#hey button {
+    font-size: 1.2rem;
+    margin-top: 50px;
+    padding: 20px 30px;
+    border: 1px solid var(--cs-highlight-font-color);
+    background-color: var(--cs-bg-color);
+    color: var(--cs-highlight-font-color);
+    border-radius: 5px;
+}
+
+.about-me {
+    color: var(--cs-highlight-font-color);
+}
+
+.about-me .h1 {
+    font-family: var(--cs-nb-text-font);
+    font-size: 1.6rem;
+    padding-left: 5rem;
+}
+
+.heading {
+    font-family: var(--cs-nb-text-font);
+    font-weight: bold;
+    color: var(--cs-highlight-font-color);
+}
+
+.card {
+    background-color: var(--cs-bg-color);
+    border-color: var(--cs-secondary-bg-color);
+}
+
+.border {
+    border-color: var(--cs-secondary-bg-color)
+}
+
+.sub-head {
+    font-weight: bold;
+}
+
+.ico {
+    font-family: var(--cs-nb-text-font);
+    color: var(--cs-highlight-font-color);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.card-text {
+    color: var(--cs-primary-font-color);
+}
+
+.btn, .badge {
+    background-color: var(--cs-bg-color);
+    border: 1px solid var(--cs-highlight-font-color);
+    color: var(--cs-highlight-font-color);
+    font-family: var(--cs-primary-text-font);
+}
+
+.badge {
+    border: none;
+    background-color: #96CDFF;
+    color: var(--cs-bg-color);
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+.table-dark {
+    font-size: 1rem;
+    --bs-table-bg: var(--cs-bg-color);
+}
+
+.table > thead {
+    color: var(--cs-highlight-font-color);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    --bs-table-accent-bg: rgb(150, 205, 255, .1);
+    color: var(--cs-secondary-font-color);
+}
+
+.table > :not(caption) > * > * {
+    border-bottom-width: 0;
+}
+
+.svg-container {
+    width: inherit;
+    height: inherit;
+    resize: both;
+    /*overflow: auto;*/
+    margin: auto;
+    padding-top: 4rem;
+}
+
+svg {
+    width: 70%;
+    height: 70%;
+}
+
+.collapse-btn {
+    color: var(--cs-primary-font-color);
+    border: 1px solid var(--cs-primary-font-color); 
+    border-radius: 5px; 
+    padding: 7px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+    #hey {
+        margin-left: 25px;
+    }
+
+    .about {
+        max-width: 250px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 3rem;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    #img-col img {
+        max-width: 15rem;
+    }
+
+    svg {
+        width: 95%;
+        height: 95%;
+    }
+}
+
+@media (min-width: 576px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        max-width: 350px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 3.5rem;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+
+    #img-col img {
+        max-width: 17rem;
+    }
+
+    .besides-column {
+        min-width: 350px;
+    }
+
+    svg {
+        width: 95%;
+        height: 95%;
+    }
+}
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        max-width: 480px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 3.5rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    #img-col img {
+        max-width: 25rem;
+    }
+
+    svg {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        max-width: 600px;
+    }
+
+    .about-me .h1 {
+        font-size: 1.6rem;
+        padding-left: 12.5rem;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    #img-col img {
+        max-width: 25rem;
+    }
+
+    svg {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .name {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        font-weight: normal;
+        max-width: 600px;
+    }
+
+    #img-col img {
+        max-width: 25rem;
+    }
+
+    svg {
+        width: 50%;
+        height: 50%;
+    }
+}
